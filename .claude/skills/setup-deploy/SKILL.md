@@ -1,0 +1,1 @@
+/Users/obat/Documents/WAHALA.studio/.claude/skills/gstack/setup-deploy/SKILL.md

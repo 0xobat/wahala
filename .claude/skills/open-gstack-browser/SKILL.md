@@ -1,0 +1,1 @@
+/Users/obat/Documents/WAHALA.studio/.claude/skills/gstack/open-gstack-browser/SKILL.md

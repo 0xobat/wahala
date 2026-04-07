@@ -1,0 +1,1 @@
+/Users/obat/Documents/WAHALA.studio/.claude/skills/gstack/checkpoint/SKILL.md
