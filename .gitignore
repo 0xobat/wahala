@@ -8,6 +8,7 @@ __pycache__/
 dist/
 build/
 .next/
+out/
 *.tsbuildinfo
 
 # Environment
@@ -20,3 +21,12 @@ build/
 
 # Bun
 bun.lockb
+
+# Next.js
+next-env.d.ts
+
+# Vercel
+.vercel
+
+# Misc
+*.pem
