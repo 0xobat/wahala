@@ -1,1 +1,0 @@
-/Users/obat/Documents/WAHALA.studio/.claude/skills/gstack/connect-chrome/SKILL.md

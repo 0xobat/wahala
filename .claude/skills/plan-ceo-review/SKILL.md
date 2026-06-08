@@ -1,1 +1,0 @@
-/Users/obat/Documents/WAHALA.studio/.claude/skills/gstack/plan-ceo-review/SKILL.md

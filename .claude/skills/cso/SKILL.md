@@ -1,1 +1,0 @@
-/Users/obat/Documents/WAHALA.studio/.claude/skills/gstack/cso/SKILL.md

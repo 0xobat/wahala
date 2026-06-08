@@ -1,0 +1,13 @@
+{
+  "name": "wahala-studio",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:coming-soon": "bun --filter @wahala/coming-soon dev",
+    "build:coming-soon": "bun --filter @wahala/coming-soon build",
+    "typecheck": "bun --filter '*' typecheck"
+  }
+}
