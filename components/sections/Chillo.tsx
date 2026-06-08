@@ -47,7 +47,7 @@ export default function Chillo() {
           WAHALA<span className="studio">.studio</span>
         </h1>
 
-        <Countdown countdown={countdown} chaos={0} size="medium" />
+        <Countdown countdown={countdown} size="medium" />
 
         <div className="signup">
           <div className="prompt">// RESERVE YOUR SEAT — boarding the danfo</div>

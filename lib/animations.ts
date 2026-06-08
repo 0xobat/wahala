@@ -16,8 +16,8 @@ const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 /*
  * Global scroll-scrubbed timeline.
  * Drives :root CSS variables AND publishes `chaos`/`sectionIdx` to the
- * React store so JSX-side calculations (Hero ghost transforms, glitch
- * intensity) read from the same scroll value.
+ * React store so JSX-side calculations (Hero rotation, glitch intensity,
+ * section markers) read from the same scroll value.
  */
 export function initGlobalTimeline(): () => void {
   ensureRegistered();

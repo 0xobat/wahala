@@ -3,16 +3,6 @@
  * Source of truth for the values: DESIGN.md
  */
 
-export const colors = {
-  primary: "#FFDC00",
-  surface0: "#0A0A0A",
-  surface1: "#0D0D0A",
-  surface2: "#0F0F0C",
-  surface3: "#111111",
-  surface4: "#131313",
-  onSurface: "#FFFFFF",
-} as const;
-
 export const scrub = {
   rotationStart: -1.5,
   rotationEnd: 0,
@@ -25,7 +15,8 @@ export const scrub = {
 } as const;
 
 export const launch = {
-  iso: "2026-08-22T12:00:00-04:00",
+  // Aug 1, 2026, 12:00pm Eastern (−04:00 = EDT, the correct offset for that date).
+  iso: "2026-08-01T12:00:00-04:00",
   label: "Summer 2026 / Toronto",
 } as const;
 

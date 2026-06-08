@@ -1,45 +1,43 @@
 # WAHALA.studio
 
-## Setup
+Creative-studio brand. Tagline: "Creative chaos — resolved." Toronto studio, Lagos energy;
+the Danfo bus (yellow on near-black) is the visual anchor and the page transforms from
+**WAHALA DAY** (chaos) to **CHILLO MODE** (calm) as you scroll.
 
-After cloning, run `git submodule update --init` to fetch gstack.
+## Repo
 
-## gstack
+A single flat Next.js 16 app (App Router, Turbopack) + React 19 + GSAP + Tailwind v4 at the
+repo root — **not** a monorepo. It's a **simple placeholder** standing in for the full studio
+website. Keep it minimal — don't grow it into the full multi-section studio site; if that gets
+built, it belongs in a separate repo (or reintroduce Bun workspaces deliberately then).
 
-Use the `/browse` skill from gstack for all web browsing. Never use `mcp__claude-in-chrome__*` tools.
+## Setup & commands
 
-### Available skills
+Run from the repo root (Bun 1.3+):
 
-- `/office-hours` - Office hours session
-- `/plan-ceo-review` - CEO review planning
-- `/plan-eng-review` - Engineering review planning
-- `/plan-design-review` - Design review planning
-- `/design-consultation` - Design consultation
-- `/design-shotgun` - Design shotgun
-- `/design-html` - Design to HTML
-- `/review` - Code review
-- `/ship` - Ship code
-- `/land-and-deploy` - Land and deploy
-- `/canary` - Canary deployment
-- `/benchmark` - Benchmarking
-- `/browse` - Web browsing (use this for ALL web browsing)
-- `/connect-chrome` - Connect to Chrome
-- `/qa` - QA testing
-- `/qa-only` - QA only
-- `/design-review` - Design review
-- `/setup-browser-cookies` - Setup browser cookies
-- `/setup-deploy` - Setup deployment
-- `/retro` - Retrospective
-- `/investigate` - Investigation
-- `/document-release` - Document a release
-- `/codex` - Codex
-- `/cso` - CSO
-- `/autoplan` - Auto planning
-- `/plan-devex-review` - DevEx review planning
-- `/devex-review` - DevEx review
-- `/careful` - Careful mode
-- `/freeze` - Freeze
-- `/guard` - Guard
-- `/unfreeze` - Unfreeze
-- `/gstack-upgrade` - Upgrade gstack
-- `/learn` - Learn
+- `bun install` — install (node_modules is gitignored; absent on fresh checkout)
+- `bun run dev` — dev server (port 3000)
+- `bun run build` — production build
+- `bun run start` — serve the production build
+- `bun run typecheck` — `tsc --noEmit`
+
+## Design system
+
+`DESIGN.md` (root) is the authoritative brand/design system — read it before any visual work.
+Hard rules from it: one accent only (Wahala Yellow `#FFDC00`, no second color, no light mode);
+two fonts with non-overlapping roles (Space Grotesk = display only, JetBrains Mono = everything
+else); flat (no box-shadow elevation); sharp corners; the interaction is the pitch.
+
+## How the app works
+
+A single GSAP `ScrollTrigger` (`lib/animations.ts`, `scrub: true`) reads scroll
+once and writes to both `:root` CSS variables (CSS-driven scrubbing) and a `useSyncExternalStore`
+bridge (`lib/chaos-store.ts`, read via `useChaos()`) so React JSX reads the same `chaos` value
+(1→0). Most styling lives in `app/globals.css`. Four sections: Hero / Voice / Boarding / Chillo.
+
+## Conventions
+
+- **Defer commits** — propose the message and wait for the user; don't commit unprompted.
+- **No emoji** in code, comments, or commit messages.
+- Spec/design history lives in `docs/`; the original 5-section spec there is historical intent —
+  the built 4-section coming-soon app + `DESIGN.md` are current.
